@@ -24,15 +24,16 @@
             position: fixed;
             top: 0;
             width: 100%;
-            height: 20%;
             background: linear-gradient(135deg, #ff0000, #00c6ff);
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-align: center;
+            padding: 10px 0;
         }
 
         .combined-header .header-content {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
@@ -41,7 +42,7 @@
         .logo-group {
             display: flex;
             align-items: center;
-            gap: 10px; /* Reduced gap between logos */
+            gap: 10px;
         }
 
         .logo {
@@ -49,7 +50,7 @@
         }
 
         .combined-header h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: white;
             font-weight: bold;
             text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
@@ -59,6 +60,7 @@
             list-style: none;
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .nav-links li a {
@@ -78,7 +80,7 @@
         /* Header */
         .header {
             text-align: center;
-            padding: 490px 200px;
+            padding: 550px 200px;
             background: url(pragatimela.jpg) no-repeat center center/cover;
             color: black;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
@@ -86,7 +88,7 @@
         }
 
         .header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
         /* Parallax Sections */
@@ -96,13 +98,13 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 400px;
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-align: center;
         }
 
@@ -135,19 +137,20 @@
 
         /* Content Sections with Transparent Black Background */
         .content {
-            padding: 50px 20px;
+            padding: 30px 15px;
             background: linear-gradient(135deg, #ff0000, #00c6ff);
             color: #fff;
             text-align: center;
         }
 
         .content h3 {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .content p {
             max-width: 800px;
             margin: 0 auto;
+            font-size: 0.9rem;
         }
 
         /* Scroll Animation */
@@ -165,10 +168,75 @@
         /* Footer */
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: #000;
             color: white;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 200px 15px;
+            }
+
+            .combined-header h1 {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links li a {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+
+            .parallax {
+                font-size: 1.2rem;
+                height: 250px;
+            }
+
+            .content p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 150px 10px;
+            }
+
+            .combined-header h1 {
+                font-size: 1rem;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .nav-links {
+                gap: 5px;
+            }
+
+            .nav-links li a {
+                font-size: 0.8rem;
+            }
+
+            .parallax {
+                font-size: 1rem;
+                height: 200px;
+            }
+
+            .content {
+                padding: 20px 10px;
+            }
+
+            .content p {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
@@ -185,70 +253,48 @@
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-           
             <li><a href="#about">About Us</a></li>
             <li><a href="#highlights">Highlights</a></li>
         </ul>
     </div>
 
     <!-- Header -->
-    <header class="header" id="home">
-    </header>
+    <header class="header" id="home"></header>
+
+    <!-- About Section -->
     <section class="parallax bg2" id="about">
         <h2>About Our Event</h2>
     </section>
-    <!-- Another Content Section -->
+
+    <!-- Content Section -->
     <section class="content content-scroll" id="joinUsContent">
         <h3>Join Us</h3>
-        <p>Celebrating the Innovators of Tomorrow
+        <p>Celebrating the Innovators of Tomorrow</p>
+    </section>
 
-            At Jyothy Institute of Technology, we take immense pride in celebrating Programmer's Day, a tribute to the masterminds who turn ideas into reality through code.
-            
-            Programmers are the architects of the digital age, weaving logic and creativity into solutions that impact billions. This day is dedicated to appreciating their invaluable contributions and fostering innovation among students passionate about technology.
-            
-            
-            ---
-            
-            Why Programmer's Day Matters
-            
-            Innovation in Action: From simple apps to groundbreaking AI, programming shapes the world around us.
-            
-            Creativity Meets Logic: It's not just about code—it's about solving real-world problems in ingenious ways.
-            
-            Future-Focused Skills: Programming equips individuals to thrive in an ever-evolving tech-driven world.
-            
-            
-            </p></section>
-
-    <!-- Parallax Sections -->
+    <!-- Highlights Section -->
     <section class="parallax bg1" id="highlights">
         <h2>Event Highlights</h2>
     </section>
 
-    <!-- Content Section with Scroll Animation -->
+    <!-- Content Section -->
     <section class="content content-scroll" id="highlightsContent">
-        <h3>🎉 Interactive Coding Challenges<br>
-            💡 Tech Talks by Industry Experts<br>
-            👨‍💻 Programming Exhibition<br>
-            🏆 Recognition for Achievements</h3>
+        <h3>🎉 Interactive Coding Challenges<br>💡 Tech Talks by Industry Experts</h3>
         <p>Welcome to Jyothy Institute of Technology. Join us in celebrating Programmer's Day 2024!</p>
     </section>
 
-    
-
+    <!-- Footer -->
     <footer class="footer">
         <p>© 2024 Programmers Day. All Rights Reserved.</p>
     </footer>
 
+    <!-- Scroll Animation -->
     <script>
-        // Scroll event listener to trigger animations
         window.addEventListener('scroll', function() {
             const scrollElements = document.querySelectorAll('.content-scroll');
-
             scrollElements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight;
-
                 if (elementPosition < screenPosition) {
                     element.classList.add('visible');
                 }
